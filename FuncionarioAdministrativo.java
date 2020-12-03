@@ -1,12 +1,16 @@
+import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class FuncionarioAdministrativo {
 
     private String nome;
     private LocalDate dataNascimento; 
     private String cpf;
-    private ArrayList<String> funcs;
+    private List<String> funcs;
 
 
     public FuncionarioAdministrativo(String nome, LocalDate dataNascimento, String cpf) {
@@ -17,11 +21,9 @@ public class FuncionarioAdministrativo {
     }
 
 
-    public boolean addFunc (String func) {
-        funcs.add(func);
-        return true;
+    public boolean cadastrarFunc (String func) {
+       return funcs.add(func);
     }
-
 
 
     public String getNome() {
@@ -34,6 +36,11 @@ public class FuncionarioAdministrativo {
     }
 
 
+    public void cpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    
     public String getCpf() {
         return cpf;
     }

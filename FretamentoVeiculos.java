@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FretamentoVeiculos {
   
@@ -9,6 +11,7 @@ public class FretamentoVeiculos {
     private LocalDate dataTermino;
     private double distanciaPercorrida;
     private double valorCobrado;
+    private List<String> veiculos = new ArrayList<String>();
 
     public FretamentoVeiculos(int idUnico, VeiculoPasseio veiculo, FuncionarioAdministrativo condutor,
             LocalDate dataInicio, LocalDate dataTermino, double distanciaPercorrida,
@@ -23,7 +26,9 @@ public class FretamentoVeiculos {
         this.valorCobrado = valorCobrado;
     }
 
-
+    public boolean caadastrarFretamento(String veiculo) {
+        return veiculos.add(veiculo);
+    } 
 
     public int getIdUnico() {
         return idUnico;
