@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class FuncionarioManobrista extends FuncionarioAdministrativo {
+public class FuncionarioManobrista extends Funcionario {
 
     private String numeroCNH;
     private String categoriaCNH;
@@ -30,7 +30,7 @@ public class FuncionarioManobrista extends FuncionarioAdministrativo {
 
     @Override
     public String toString() {
-        return "NúmeroCNH [NumeroCNH=" + numeroCNH + ", CategoriaCNH=" + categoriaCNH + ", VencimentoCNH=" + vencimentoCNH + ", custoTotal=" + "]";
+        return super.toString() + "[NumeroCNH=" + numeroCNH + ", CategoriaCNH=" + categoriaCNH + ", VencimentoCNH=" + vencimentoCNH + ", custoTotal=" + "]";
     }
 
 

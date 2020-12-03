@@ -1,13 +1,14 @@
 import java.time.LocalDate;
 
-public class FuncionarioMotorista extends FuncionarioAdministrativo {
+public class FuncionarioMotorista extends Funcionario {
 
 	
 	public FuncionarioMotorista(String nome, LocalDate dataNascimento, String cpf) {
         super(nome, dataNascimento, cpf);
+
+        
         
     }
-
    
     public boolean cargasPerigosas(double peso) {
         if(peso > 3500.0) {
