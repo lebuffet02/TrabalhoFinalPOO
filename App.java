@@ -31,13 +31,14 @@ public class App {
         // v.numPlaca("G4BFR");
 
         ListaDeFuncionarios listaFuncionarios = new ListaDeFuncionarios();
-
-        FuncionarioManobrista funcionarioManobrista = new FuncionarioManobrista("Manobrista1", LocalDate.of(1981, 03, 10), "02900448042", "CNH", "A", LocalDate.of(2022, 05, 10));
+        
         FuncionarioAdministrativo funcionarioAdministrativo = new FuncionarioAdministrativo("Administrativo1",  LocalDate.of(1930, 03, 10), "45236987412");
-        // FuncionarioAdministrativo funcionarioAdministrativo = new FuncionarioAdministrativo("Administrativo1",  LocalDate.of(1930, 03, 10), "45236987412");
+        FuncionarioManobrista funcionarioManobrista = new FuncionarioManobrista("Manobrista1", LocalDate.of(1981, 03, 10), "02900448042", "CNH", "A", LocalDate.of(2022, 05, 10));
+        FuncionarioMotorista funcionarioMotorista  = new FuncionarioMotorista("Manobrista1", LocalDate.of(1981, 03, 10), "02900448042", "CNH", "A", LocalDate.of(2022, 05, 10), true, true);
 
-        listaFuncionarios.cadastraFuncionario(funcionarioManobrista);
         listaFuncionarios.cadastraFuncionario(funcionarioAdministrativo);
+        listaFuncionarios.cadastraFuncionario(funcionarioManobrista);
+        listaFuncionarios.cadastraFuncionario(funcionarioMotorista);
         
         System.out.println(listaFuncionarios);
 

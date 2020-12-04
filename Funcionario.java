@@ -25,6 +25,6 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario [cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", nome=" + nome + "]";
+        return "cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", nome=" + nome + "";
     }
 }

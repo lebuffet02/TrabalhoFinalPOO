@@ -11,7 +11,7 @@ public class FuncionarioManobrista extends Funcionario {
         super(nome, dataNascimento, cpf);
         this.numeroCNH = numeroCNH;
         this.categoriaCNH = categoriaCNH;
-        this.vencimentoCNH = vencimentoCNH;			
+        this.vencimentoCNH = vencimentoCNH;	
 	}
     
     public String getNumCNH() {
@@ -30,12 +30,8 @@ public class FuncionarioManobrista extends Funcionario {
 
     @Override
     public String toString() {
-        return super.toString() + "[NumeroCNH=" + numeroCNH + ", CategoriaCNH=" + categoriaCNH + ", VencimentoCNH=" + vencimentoCNH + ", custoTotal=" + "]";
+        return "FuncionarioManobrista [" + super.toString() + ", NumeroCNH=" + numeroCNH + ", CategoriaCNH=" + categoriaCNH + ", VencimentoCNH=" + vencimentoCNH + "] \n";
     }
-
-
-
-
 
 }   
 

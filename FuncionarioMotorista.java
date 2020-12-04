@@ -1,33 +1,36 @@
 import java.time.LocalDate;
 
-public class FuncionarioMotorista extends Funcionario {
+public class FuncionarioMotorista extends FuncionarioManobrista {
+    private boolean cursoCargasPerigosas;
+    private boolean cursoTransportePassageiros;
 
-	
-	public FuncionarioMotorista(String nome, LocalDate dataNascimento, String cpf) {
-        super(nome, dataNascimento, cpf);
-
-        
-        
-    }
-   
-    public boolean cargasPerigosas(double peso) {
-        if(peso > 3500.0) {
-            return true;
-        } 
-        return false;    
+    public FuncionarioMotorista(String nome, LocalDate dataNascimento, String cpf, String numeroCNH,
+            String categoriaCNH, LocalDate vencimentoCNH, boolean cursoCargasPerigosas,
+            boolean cursoTransportePassageiros) {
+        super(nome, dataNascimento, cpf, numeroCNH, categoriaCNH, vencimentoCNH);
+        this.setCursoCargasPerigosas(cursoCargasPerigosas);
+        this.setCursoTransportePassageiros(cursoTransportePassageiros);
     }
 
-
-    public boolean transportePassageiros(int passageiros) {
-        if(passageiros > 20) {
-            return true;
-        }
-        return false;
+    public boolean isCursoTransportePassageiros() {
+        return cursoTransportePassageiros;
     }
 
+    public void setCursoTransportePassageiros(boolean cursoTransportePassageiros) {
+        this.cursoTransportePassageiros = cursoTransportePassageiros;
+    }
 
+    public boolean isCursoCargasPerigosas() {
+        return cursoCargasPerigosas;
+    }
 
+    public void setCursoCargasPerigosas(boolean cursoCargasPerigosas) {
+        this.cursoCargasPerigosas = cursoCargasPerigosas;
+    }
 
+    @Override
+    public String toString() {
+        return "FuncionarioMotorista [numeroCNH=" + super.getNumCNH() + ", categoriaCNH=" + super.getCategoria() + ", vencimentoCNH=" + super.getVencimentoCNH() + " cursoCargasPerigosas=" + cursoCargasPerigosas + ", cursoTransportePassageiros="
+                + cursoTransportePassageiros + "] \n";
+    }
 }
-
-
