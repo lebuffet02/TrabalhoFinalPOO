@@ -8,9 +8,17 @@ public class ListaDeFuncionarios {
         lista = new ArrayList<>();
     }
 
-    public boolean cadastraFuncionario(Funcionario funcionario) {
+    public void cadastraFuncionario(Funcionario funcionario) {
         lista.add(funcionario);
-        return true;
+    }
+
+    public Funcionario buscaFuncionarioPorCPF(String cpf) {
+        for (Funcionario funcionario : lista) {
+            if (funcionario.getCpf().equals(cpf)) {
+                return funcionario;
+            }
+        }
+        return null;
     }
 
     @Override
