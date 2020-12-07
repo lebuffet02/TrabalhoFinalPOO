@@ -21,32 +21,16 @@ public class ListaDeVeiculos {
         }
         return null;
     }
- 
+
+    public List<Veiculo> getLista() {
+        return lista;
+    }
+
     public boolean veiculosLivres(List<Veiculo> lista) {
         if(lista == null) {
-            lista.
             return true;
         }
         return false; 
-    }  
-    
-    public FretamentoVeiculos topLucrativos(List<FretamentoVeiculos> list) {
-        FretamentoVeiculos aux;
-            for(int i = 0; i<list.size(); i++) {
-                list.compareTo(list.get(i), list.get(i)); {
-                    if(((Comparable<String>) list.get(i)).compareTo(list.get(i + 1))) {
-                        aux = list.get(i);
-                    }
-                }   
     }
-        public static Comparator<FretamentoVeiculos> topLucrativos = new Comparator<FretamentoVeiculos>() {
-
-            public int compare(Funcionario s1, Funcionario s2) {
-        
-             return s1.getNome().compareTo(s2.getNome());      
-           }};
-    }
-
-
 
 }

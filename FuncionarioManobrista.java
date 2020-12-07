@@ -6,19 +6,19 @@ public class FuncionarioManobrista extends Funcionario {
     private String categoriaCNH;
     private LocalDate vencimentoCNH;
 
-    
-	public FuncionarioManobrista(String nome, LocalDate dataNascimento, String cpf, String numeroCNH, String categoriaCNH, LocalDate vencimentoCNH) {
+    public FuncionarioManobrista(String nome, LocalDate dataNascimento, String cpf, String numeroCNH,
+            String categoriaCNH, LocalDate vencimentoCNH) {
         super(nome, dataNascimento, cpf);
         this.numeroCNH = numeroCNH;
         this.categoriaCNH = categoriaCNH;
-        this.vencimentoCNH = vencimentoCNH;	
-	}
-    
+        this.vencimentoCNH = vencimentoCNH;
+    }
+
     public String getNumCNH() {
         return numeroCNH;
     }
 
-
+    @Override
     public String getCategoria() {
         return categoriaCNH;
     }
@@ -27,11 +27,15 @@ public class FuncionarioManobrista extends Funcionario {
         return vencimentoCNH;
     }
 
+    @Override
+    public boolean isCursoCargasPerigosas() {
+        return false;
+    }
 
     @Override
     public String toString() {
-        return "FuncionarioManobrista [" + super.toString() + ", NumeroCNH=" + numeroCNH + ", CategoriaCNH=" + categoriaCNH + ", VencimentoCNH=" + vencimentoCNH + "] \n";
+        return "FuncionarioManobrista [" + super.toString() + ", NumeroCNH=" + numeroCNH + ", CategoriaCNH="
+                + categoriaCNH + ", VencimentoCNH=" + vencimentoCNH + "] \n";
     }
 
-}   
-
+}

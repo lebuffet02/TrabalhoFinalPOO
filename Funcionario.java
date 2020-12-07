@@ -31,6 +31,14 @@ public abstract class Funcionario {
         return nome.compareTo(o.getNome());
     }
 
+    public String getCategoria() {
+        return "null";
+    }
+
+    public boolean isCursoCargasPerigosas() {
+        return false;
+    }
+
     @Override
     public String toString() {
         return "cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", nome=" + nome + "";

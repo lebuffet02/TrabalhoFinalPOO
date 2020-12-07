@@ -26,13 +26,13 @@ public class ListaDeFuncionarios {
         return null;
     }
 
+    public List<Funcionario> getLista() {
+        return lista;
+    }
+
     @Override
     public String toString() {
         return "ListaDeFuncionarios [lista=" + lista + "]";
-    }
-
-	public Object compareTo(Funcionario funcionario) {
-        return ((ListaDeFuncionarios) this.lista).compareTo(funcionario);
     }
 
     public boolean motoristasLivres() {
@@ -43,18 +43,4 @@ public class ListaDeFuncionarios {
         }
         return false; 
     }
-
-	public ArrayList<Funcionario> sort() {
-        for (Funcionario funcionario : lista) {
-            Collections.sort((List<Funcionario>) lista);
-        }
-        return null;   
-    }
-    
-    public static Comparator<Funcionario> ordenacaoFunc = new Comparator<Funcionario>() {
-
-        public int compare(Funcionario s1, Funcionario s2) {
-    
-         return s1.getNome().compareTo(s2.getNome());      
-       }};
 }

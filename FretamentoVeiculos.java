@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public abstract class FretamentoVeiculos {
+public class FretamentoVeiculos {
 
     private int idUnico;
     private Veiculo veiculo;
@@ -14,16 +14,15 @@ public abstract class FretamentoVeiculos {
             LocalDate dataTermino, double distanciaPercorrida) {
         this.idUnico = idUnico;
         this.veiculo = veiculo;
-        this.condutor = condutor;
         this.dataInicio = dataInicio;
         this.dataTermino = dataTermino;
         this.distanciaPercorrida = distanciaPercorrida;
+        if(validaCondutor()) {
+            this.condutor = condutor;
+        }
     }
 
-    public boolean validaCondutor() {
-        return false;
-    }
-
+   
     public int getIdUnico() {
         return idUnico;
     }
@@ -74,6 +73,13 @@ public abstract class FretamentoVeiculos {
 
     public void setValorCobrado(double valorCobrado) {
         this.valorCobrado = valorCobrado;
+    }
+
+    public boolean validaCondutor() {
+        if(getVeiculo().getPesoVeiculo() < 3500 && getCondutor().getCategoria().equalsIgnoreCase("B")) {
+            return true;
+        }
+        return false;
     }
 
     @Override

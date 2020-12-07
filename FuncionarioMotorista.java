@@ -20,7 +20,8 @@ public class FuncionarioMotorista extends FuncionarioManobrista {
     public void setCursoTransportePassageiros(boolean cursoTransportePassageiros) {
         this.cursoTransportePassageiros = cursoTransportePassageiros;
     }
-
+    
+    @Override
     public boolean isCursoCargasPerigosas() {
         return cursoCargasPerigosas;
     }

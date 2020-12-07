@@ -34,6 +34,14 @@ public class FretamentoOnibus extends FretamentoVeiculos {
     }
 
     @Override
+    public boolean validaCondutor() {
+        if (super.getVeiculo().getLotacaoMaxPassageiros() > 8 && super.getCondutor().getCategoria().equalsIgnoreCase("D")) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
     public String toString() {
         return "FretamentoOnibus [condutor=" + super.getCondutor() + ", dataInicio=" + super.getDataInicio()
                 + ", dataTermino=" + super.getDataTermino() + ", distanciaPercorrida=" + super.getDistanciaPercorrida()
