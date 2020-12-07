@@ -16,7 +16,7 @@ public class ListaDeFretamentos {
     public List<Funcionario> listaMotoristasLivres(ListaDeFuncionarios listaDeFuncionarios) {
         ArrayList<Funcionario> retorno = new ArrayList<>();
         for (FretamentoVeiculos fretamento : lista) {
-            if(!listaDeFuncionarios.getLista().contains(fretamento.getCondutor())) {
+            if(!listaDeFuncionarios.getLista().contains(fretamento.getCondutor()) && !retorno.contains(fretamento.getCondutor())) {
                 retorno.add(fretamento.getCondutor());
             }
         }
@@ -26,7 +26,7 @@ public class ListaDeFretamentos {
     public List<Veiculo> listaVeiculosLivres(ListaDeVeiculos listaDeVeiculos) {
         ArrayList<Veiculo> retorno = new ArrayList<>();
         for (FretamentoVeiculos fretamento : lista) {
-            if(!listaDeVeiculos.getLista().contains(fretamento.getVeiculo())) {
+            if(!listaDeVeiculos.getLista().contains(fretamento.getVeiculo()) && !retorno.contains(fretamento.getVeiculo())) {
                 retorno.add(fretamento.getVeiculo());
             }
         }
@@ -37,11 +37,15 @@ public class ListaDeFretamentos {
         ArrayList<FretamentoVeiculos> retorno = new ArrayList<>();
         int i = 0;
         for (FretamentoVeiculos fretamentoVeiculos : lista) {
-            if(fretamentoVeiculos.getDataTermino().isBefore(LocalDate.now())) {
+            if(!fretamentoVeiculos.getDataTermino().isBefore(LocalDate.now()) && !retorno.contains(lista.get(i))) {
                 retorno.add(lista.get(i));
             }
         }
         return retorno;
+    }
+
+    public List<FretamentoVeiculos> getLista() {
+        return lista;
     }
     
 }

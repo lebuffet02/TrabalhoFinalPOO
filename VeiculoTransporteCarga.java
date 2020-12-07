@@ -31,7 +31,7 @@ public class VeiculoTransporteCarga extends Veiculo {
     @Override
     public String toString() {
         return "VeiculoTransporteCarga [anoFabricacao=" + super.getAnoFabricacao() + ", modeloVeiculo=" + super.getModeloVeiculo() + ", numPlaca=" + super.getNumPlaca()
-        + ", pesoVeiculo=" + super.getPesoVeiculo() + "capacidadeCarga=" + getCapacidadeCarga() + ", numEixos= + " + getNumEixos() + "]";
+        + ", pesoVeiculo=" + super.getPesoVeiculo() + ", capacidadeCarga=" + getCapacidadeCarga() + ", numEixos=" + getNumEixos() + "] \n";
     }
     
 }

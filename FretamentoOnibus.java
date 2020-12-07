@@ -34,8 +34,8 @@ public class FretamentoOnibus extends FretamentoVeiculos {
     }
 
     @Override
-    public boolean validaCondutor() {
-        if (super.getVeiculo().getLotacaoMaxPassageiros() > 8 && super.getCondutor().getCategoria().equalsIgnoreCase("D")) {
+    public boolean validaCondutor(Funcionario condutor) {
+        if (super.getVeiculo().getLotacaoMaxPassageiros() > 8 && condutor.getCategoria().equalsIgnoreCase("D") && condutor.isCursoTransportePassageiros()) {
             return true;
         }
         return false;
@@ -46,6 +46,6 @@ public class FretamentoOnibus extends FretamentoVeiculos {
         return "FretamentoOnibus [condutor=" + super.getCondutor() + ", dataInicio=" + super.getDataInicio()
                 + ", dataTermino=" + super.getDataTermino() + ", distanciaPercorrida=" + super.getDistanciaPercorrida()
                 + ", idUnico=" + super.getIdUnico() + ", valorCobrado=" + super.getValorCobrado() + ", veiculo="
-                + super.getVeiculo() + "]";
+                + super.getVeiculo() + "] \n";
     }
 }

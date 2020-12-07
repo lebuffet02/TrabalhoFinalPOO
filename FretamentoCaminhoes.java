@@ -29,10 +29,10 @@ public class FretamentoCaminhoes extends FretamentoVeiculos {
     }
 
     @Override
-    public boolean validaCondutor() {
-        boolean condicaoCategoriaC = super.getVeiculo().getPesoVeiculo() > 3500 && super.getCondutor().getCategoria().equalsIgnoreCase("C");
-        boolean condicaoCategoriaE = super.getVeiculo().getPesoVeiculo() > 6000 && super.getCondutor().getCategoria().equalsIgnoreCase("E");
-        if(isCargaPeriogosa() && super.getCondutor().isCursoCargasPerigosas()) {
+    public boolean validaCondutor(Funcionario condutor) {
+        boolean condicaoCategoriaC = super.getVeiculo().getPesoVeiculo() > 3500 && condutor.getCategoria().equalsIgnoreCase("C");
+        boolean condicaoCategoriaE = super.getVeiculo().getPesoVeiculo() > 6000 && condutor.getCategoria().equalsIgnoreCase("E");
+        if(isCargaPeriogosa() && condutor.isCursoCargasPerigosas()) {
             if(condicaoCategoriaE) {
                 return true;
             } else if (condicaoCategoriaC) {
@@ -53,7 +53,7 @@ public class FretamentoCaminhoes extends FretamentoVeiculos {
         return "FretamentoCaminhoes [condutor=" + super.getCondutor() + ", dataInicio=" + super.getDataInicio()
                 + ", dataTermino=" + super.getDataTermino() + ", distanciaPercorrida=" + super.getDistanciaPercorrida()
                 + ", idUnico=" + super.getIdUnico() + ", valorCobrado=" + super.getValorCobrado() + ", veiculo="
-                + super.getVeiculo() + "cargaPeriogosa=" + this.isCargaPeriogosa() + "]";
+                + super.getVeiculo() + "cargaPeriogosa=" + this.isCargaPeriogosa() + "] \n";
     }
 
 }

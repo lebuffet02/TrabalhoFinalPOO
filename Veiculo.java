@@ -46,7 +46,7 @@ public abstract class Veiculo {
     @Override
     public String toString() {
         return "Veiculo [anoFabricacao=" + anoFabricacao + ", modeloVeiculo=" + modeloVeiculo + ", numPlaca=" + numPlaca
-                + ", pesoVeiculo=" + pesoVeiculo + "]";
+                + ", pesoVeiculo=" + pesoVeiculo + "] \n";
     }
 
 	public int getLotacaoMaxPassageiros() {

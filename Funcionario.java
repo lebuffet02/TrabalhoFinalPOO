@@ -39,6 +39,10 @@ public abstract class Funcionario {
         return false;
     }
 
+    public boolean isCursoTransportePassageiros() {
+        return false;
+    }
+
     @Override
     public String toString() {
         return "cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", nome=" + nome + "";

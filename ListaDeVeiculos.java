@@ -26,11 +26,4 @@ public class ListaDeVeiculos {
         return lista;
     }
 
-    public boolean veiculosLivres(List<Veiculo> lista) {
-        if(lista == null) {
-            return true;
-        }
-        return false; 
-    }
-
 }

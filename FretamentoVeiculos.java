@@ -17,7 +17,7 @@ public class FretamentoVeiculos {
         this.dataInicio = dataInicio;
         this.dataTermino = dataTermino;
         this.distanciaPercorrida = distanciaPercorrida;
-        if(validaCondutor()) {
+        if(validaCondutor(condutor)) {
             this.condutor = condutor;
         }
     }
@@ -75,8 +75,8 @@ public class FretamentoVeiculos {
         this.valorCobrado = valorCobrado;
     }
 
-    public boolean validaCondutor() {
-        if(getVeiculo().getPesoVeiculo() < 3500 && getCondutor().getCategoria().equalsIgnoreCase("B")) {
+    public boolean validaCondutor(Funcionario condutor) {
+        if(getVeiculo().getPesoVeiculo() < 3500 && condutor.getCategoria().equalsIgnoreCase("B")) {
             return true;
         }
         return false;
@@ -86,7 +86,7 @@ public class FretamentoVeiculos {
     public String toString() {
         return "FretamentoVeiculos [condutor=" + condutor + ", dataInicio=" + dataInicio + ", dataTermino="
                 + dataTermino + ", distanciaPercorrida=" + distanciaPercorrida + ", idUnico=" + idUnico
-                + ", valorCobrado=" + valorCobrado + ", veiculo=" + veiculo + "]";
+                + ", valorCobrado=" + valorCobrado + ", veiculo=" + veiculo + "] \n";
     }
 
 }

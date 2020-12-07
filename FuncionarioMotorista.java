@@ -13,6 +13,7 @@ public class FuncionarioMotorista extends FuncionarioManobrista {
         this.setCursoTransportePassageiros(cursoTransportePassageiros);
     }
 
+    @Override
     public boolean isCursoTransportePassageiros() {
         return cursoTransportePassageiros;
     }
