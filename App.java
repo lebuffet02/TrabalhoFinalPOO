@@ -156,6 +156,7 @@ public class App {
                 }
 
                 case 11: {
+                    System.out.println(listaDeFretamentos.listaMotoristasLivres(listaFuncionarios));
                     
                     break;
                 }
