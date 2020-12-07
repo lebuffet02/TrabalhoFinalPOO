@@ -12,6 +12,8 @@ public class App {
         ListaDeFuncionarios listaFuncionarios = new ListaDeFuncionarios();
         ListaDeVeiculos listaDeVeiculos = new ListaDeVeiculos();
         List <FuncionarioMotorista> func = new ArrayList<>();
+        ArrayList<String> f = new ArrayList<String>(); 
+        ArrayList<String> veic = new ArrayList<String>();
 
         System.out.println(listaFuncionarios);
         int numero;
@@ -27,8 +29,8 @@ public class App {
             System.out.println("Digite 6 para buscar veículo por placa.");
             System.out.println("Digite 7 para cadastrar fretamento do veículo.");
             System.out.println("Digite 8 para listar motoristas livres.");
-            System.out.println("Digite 9 para listar o histórico dos fretamentos.");
-            System.out.println("Digite 10 para listar os top 5 veículos mais lucrativos.");
+           // System.out.println("Digite 9 para listar o histórico dos fretamentos.");
+           // System.out.println("Digite 10 para listar os top 5 veículos mais lucrativos.");
             System.out.println();
             System.out.println("Digite 0 para encerrar o programa.");
 
@@ -51,10 +53,15 @@ public class App {
                 }
 
                 case 2: {
-                    Collections.sort();
-                   
+                    
+                    f.add("João"); 
+                    f.add("Lucas"); 
+                    f.add("Arthur"); 
+                    f.add("Kafruni"); 
+                    f.add("Zé"); 
 
-
+                    Collections.sort(f);
+                    System.out.println(f);
                     break;
                 }
 
@@ -80,6 +87,14 @@ public class App {
 
                 case 5: {
 
+                    veic.add("Celta");
+                    veic.add("Corsa");
+                    veic.add("Fusion");
+                    veic.add("Z4");
+                    
+                    Collections.sort(veic);
+                    System.out.println(veic);
+
                     break;
                 }
 
@@ -90,23 +105,16 @@ public class App {
                 }
 
                 case 7: {
-                    FretamentoCaminhoes fretamentoCaminhoes = new FretamentoCaminhoes(1, listaDeVeiculos.buscaVeiculoPorPlaca("111-ZZZ"), listaDe Fu, dataInicio, dataTermino, distanciaPercorrida, cargaPeriogosa);
+
+                    VeiculoTransporteCarga veiculosTrans = new VeiculoTransporteCarga("HXG-6032", "Scania R 440 LA", 1991, 10000.0, 3500.0, 6);
+                    VeiculoTransportePassageiro veiculosPassag = new VeiculoTransportePassageiro("SGX-1267", "B731 Karosa", 1981, 9000.0, 22);
+                    FretamentoCaminhoes fretamentoCaminhoes = new FretamentoCaminhoes(12,veiculosTrans, funcionarioMotorista ,2022-05-04, 2020-05-10, 350.0, true);
                     break;
                 }
 
                 case 8: {
-                    FuncionarioMotorista motorista = new FuncionarioMotorista("B Motorista", LocalDate.of(1981, 03, 10), "02900448042", "CNH", "A", LocalDate.of(2022, 05, 10), true, true);
-                    motorista.motoristasLivres();
-                    break;
-                }
-
-                case 9: {
-
-                    break;
-                }
-
-                case 10: {
-
+                    List<Veiculo> lista;
+                    listaDeVeiculos.veiculosLivres(lista);
                     break;
                 }
 
@@ -118,7 +126,6 @@ public class App {
                 default: {
                     System.out.println("Erro. Valor inválido.");
                 }
-
             }
         } while (numero != 0);
     }

@@ -10,7 +10,7 @@ public class FretamentoCaminhoes extends FretamentoVeiculos {
         super.setValorCobrado(calculaValorCobrado());
     }
 
-    public boolean isCargaPeriogosa() {
+	public boolean isCargaPeriogosa() {
         return cargaPeriogosa;
     }
 
