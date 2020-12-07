@@ -5,6 +5,10 @@ public abstract class Funcionario {
     private LocalDate dataNascimento;
     private String cpf;
 
+    public Funcionario(String nome) {
+        this.nome = nome;
+    }
+
     public Funcionario(String nome, LocalDate dataNascimento, String cpf) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -21,6 +25,10 @@ public abstract class Funcionario {
     
     public String getCpf() {
         return cpf;
+    }
+
+    public int compareTo(Funcionario o) {
+        return nome.compareTo(o.getNome());
     }
 
     @Override

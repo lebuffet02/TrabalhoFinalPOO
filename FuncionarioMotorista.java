@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.List;
 
 public class FuncionarioMotorista extends FuncionarioManobrista {
     private boolean cursoCargasPerigosas;
@@ -23,7 +24,7 @@ public class FuncionarioMotorista extends FuncionarioManobrista {
     public boolean isCursoCargasPerigosas() {
         return cursoCargasPerigosas;
     }
-
+    
     public void setCursoCargasPerigosas(boolean cursoCargasPerigosas) {
         this.cursoCargasPerigosas = cursoCargasPerigosas;
     }

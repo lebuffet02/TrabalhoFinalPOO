@@ -20,6 +20,10 @@ public abstract class FretamentoVeiculos {
         this.distanciaPercorrida = distanciaPercorrida;
     }
 
+    public boolean validaCondutor() {
+        return false;
+    }
+
     public int getIdUnico() {
         return idUnico;
     }

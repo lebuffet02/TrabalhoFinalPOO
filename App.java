@@ -1,13 +1,17 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         Scanner resposta = new Scanner(System.in);
 
         ListaDeFuncionarios listaFuncionarios = new ListaDeFuncionarios();
         ListaDeVeiculos listaDeVeiculos = new ListaDeVeiculos();
+        List <FuncionarioMotorista> func = new ArrayList<>();
 
         System.out.println(listaFuncionarios);
         int numero;
@@ -36,7 +40,7 @@ public class App {
                             "A administrativo", LocalDate.of(1930, 03, 10), "45236987412");
                     FuncionarioManobrista funcionarioManobrista = new FuncionarioManobrista("C Manobrista",
                             LocalDate.of(1981, 03, 10), "02900448042", "CNH", "A", LocalDate.of(2022, 05, 10));
-                    FuncionarioMotorista funcionarioMotorista = new FuncionarioMotorista("B Manobrista",
+                    FuncionarioMotorista funcionarioMotorista = new FuncionarioMotorista("B Motorista",
                             LocalDate.of(1981, 03, 10), "02900448042", "CNH", "A", LocalDate.of(2022, 05, 10), true,
                             true);
                     listaFuncionarios.cadastraFuncionario(funcionarioAdministrativo);
@@ -47,6 +51,9 @@ public class App {
                 }
 
                 case 2: {
+                    Collections.sort();
+                   
+
 
                     break;
                 }
@@ -83,13 +90,13 @@ public class App {
                 }
 
                 case 7: {
-                    FretamentoCaminhoes fretamentoCaminhoes = new FretamentoCaminhoes(1, listaDeVeiculos.buscaVeiculoPorPlaca("111-ZZZ"), listaDe Fu, dataInicio, dataTermino, distanciaPercorrida, cargaPeriogosa)
-
+                    FretamentoCaminhoes fretamentoCaminhoes = new FretamentoCaminhoes(1, listaDeVeiculos.buscaVeiculoPorPlaca("111-ZZZ"), listaDe Fu, dataInicio, dataTermino, distanciaPercorrida, cargaPeriogosa);
                     break;
                 }
 
                 case 8: {
-
+                    FuncionarioMotorista motorista = new FuncionarioMotorista("B Motorista", LocalDate.of(1981, 03, 10), "02900448042", "CNH", "A", LocalDate.of(2022, 05, 10), true, true);
+                    motorista.motoristasLivres();
                     break;
                 }
 
@@ -105,6 +112,7 @@ public class App {
 
                 case 0: {
                     System.out.println("Programa Encerrado!");
+                    System.exit(1);
                 }
 
                 default: {

@@ -14,7 +14,7 @@ public class ListaDeFretamentos {
 
     public List<FretamentoVeiculos> listaMotoristasLivres() {
         for (FretamentoVeiculos fretamentoVeiculos : lista) {
-            fretamentoVeiculos.getCondutor()
+            fretamentoVeiculos.getCondutor();
         }
         return null;
     }

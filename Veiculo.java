@@ -1,6 +1,6 @@
 public abstract class Veiculo {
     private String numPlaca;
-    private String modeloVeiculo;
+    private String modeloVeiculo; 
     private int anoFabricacao;
     private double pesoVeiculo;
 

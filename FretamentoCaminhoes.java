@@ -27,6 +27,11 @@ public class FretamentoCaminhoes extends FretamentoVeiculos {
         }
         return valorCobrado;
     }
+    @Override
+    public boolean validaCondutor() {
+        if(super.get)
+        return false;
+    } 
 
     @Override
     public String toString() {
